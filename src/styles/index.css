@@ -15,12 +15,14 @@ body {
 }
 
 .nav a {
+  height: 100%;
   color: black;
   border: 1px solid #666;
   flex-basis: 25%;
-  height: 100%;
-  text-align: center;
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .home,
@@ -56,11 +58,10 @@ body {
 }
 
 .laps {
-  height: 25.8vh;
+  height: 26.2vh;
   list-style: none;
   padding-left: 0;
   background-color: #333333;
-  border-top: 3px solid black;
   font-size: 50%;
   overflow: scroll;
 }
