@@ -1,12 +1,13 @@
 html {
-  height: 100vh;
+  height: 100%;
 }
 body {
-  height: 100vh;
+  height: 100%;
   margin: 0;
 }
 
 .nav {
+  font-size: 100%;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -14,16 +15,60 @@ body {
 }
 
 .nav a {
+  color: black;
   border: 1px solid #666;
   flex-basis: 25%;
   height: 100%;
   text-align: center;
+  text-decoration: none;
 }
 
-.home {
-  font-size: 400%;
+.home,
+.timer {
+  font-size: 300%;
   background-color: rebeccapurple;
   height: 90vh;
   width: 100vw;
   text-align: center;
+}
+
+.timerTop {
+  height: 60vh;
+}
+
+.counter {
+  font-size: 50%;
+  margin: 0;
+}
+
+.startStop {
+  background-color: transparent;
+  font-size: 80%;
+  height: 40vh;
+  width: 70vw;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-top: 5vh;
+}
+
+.averages {
+  font-size: 55%;
+}
+
+.laps {
+  height: 25.8vh;
+  list-style: none;
+  padding-left: 0;
+  background-color: #333333;
+  border-top: 3px solid black;
+  font-size: 50%;
+  overflow: scroll;
+}
+
+.contraction {
+  border-bottom: 1px solid #555555;
+  color: #aaaaaa;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
 }

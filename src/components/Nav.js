@@ -5,6 +5,7 @@ export default class Nav extends Component {
   render() {
     return (
       <div className="nav">
+        <Link to="/">Home</Link>
         <Link to="/timer">Contraction<br/>Timer</Link>
         <Link to="/nbl">Newborn<br/>Log</Link>
         <Link to="/momlog">Mom's<br/>Log</Link>
