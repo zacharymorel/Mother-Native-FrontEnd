@@ -12,17 +12,21 @@ export default class NBL extends Component {
     notes: false,
   }
 
-  _feedClick = ()=> {
+  _feedClick = (e)=> {
+    e.preventDefault()
     this.setState({feed:true})
     console.log("feed state changed!");
   }
-  _sleepClick = ()=> {
+  _sleepClick = (e)=> {
+    e.preventDefault()
     this.setState({sleep:true})
   }
-  _diaperClick = ()=> {
+  _diaperClick = (e)=> {
+    e.preventDefault()
     this.setState({diaper:true})
   }
-  _notesClick = ()=> {
+  _notesClick = (e)=> {
+    e.preventDefault()
     this.setState({notes:true})
   }
 
@@ -33,15 +37,12 @@ export default class NBL extends Component {
           <FeedForm expand={this.state.feed}/>
         </div>
         <div className="nblButton" onClick={this._sleepClick}>
-          <h3>Sleep</h3>
           <SleepForm expand={this.state.sleep}/>
         </div>
         <div className="nblButton" onClick={this._diaperClick}>
-          <h3>Diaper</h3>
           <DiaperForm expand={this.state.diaper}/>
         </div>
         <div className="nblButton" onClick={this._notesClick}>
-          <h3>Notes</h3>
           <NotesForm expand={this.state.notes}/>
         </div>
       </div>

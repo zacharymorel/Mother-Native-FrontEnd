@@ -36,7 +36,7 @@ export default class FeedForm extends Component {
         )
       } else {
         return (
-          <h3>Feeding</h3>
+          <h3>Feed</h3>
         )
       }
     }
