@@ -14,20 +14,20 @@ export default class NBL extends Component {
 
   _feedClick = (e)=> {
     e.preventDefault()
-    this.setState({feed:true})
+    this.setState({feed:true, sleep:false, diaper:false, notes:false})
     console.log("feed state changed!");
   }
   _sleepClick = (e)=> {
     e.preventDefault()
-    this.setState({sleep:true})
+    this.setState({feed:false, sleep:true, diaper:false, notes:false})
   }
   _diaperClick = (e)=> {
     e.preventDefault()
-    this.setState({diaper:true})
+    this.setState({feed:false, sleep:false, diaper:true, notes:false})
   }
   _notesClick = (e)=> {
     e.preventDefault()
-    this.setState({notes:true})
+    this.setState({feed:false, sleep:false, diaper:false, notes:true})
   }
 
   render() {
