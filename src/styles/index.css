@@ -133,3 +133,41 @@ form {
   border: 1px solid #666;
   border-radius: 4px;
 }
+
+.profile {
+  background-color: rgba(156, 107, 186, 0.72);
+  height: 90vh;
+}
+
+.profile h1 {
+  font-size: 200%;
+  padding-top: 10px;
+  margin-top: 0;
+}
+
+.profile h2 {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.babyprof {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.babyprof p {
+  margin: 10px 0;
+  flex-basis: 50%;
+  font-size: 130%;
+}
+
+.babyprof a {
+  background-color: #e4e2e2;
+  border: 1px solid #666;
+  text-decoration: none;
+  color: black;
+  text-align: right;
+  padding: 4px 6px;
+}

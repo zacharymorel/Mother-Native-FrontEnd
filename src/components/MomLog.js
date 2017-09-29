@@ -4,7 +4,7 @@ export default class MomLog extends Component {
   render() {
     return (
       <div className="momlog">
-        <p>hey</p>
+        <p>Mom's Log</p>
       </div>
     );
   }
