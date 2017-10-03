@@ -2,16 +2,32 @@ html {
   height: 100%;
 }
 body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
   height: 100%;
   margin: 0;
+  padding-top: 30px;
+}
+
+#root {
+  height: 650px;
+  width: 360px;
+}
+
+.wrapper,
+.main {
+  height: 100%;
+  width: 100%;
 }
 
 .nav {
+  background-color: #e4e2e2;
   font-size: 100%;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  height: 10vh;
+  height: 10%;
 }
 
 .nav a {
@@ -29,28 +45,28 @@ body {
 .timer {
   font-size: 300%;
   background-color: rgba(156, 107, 186, 0.72);
-  height: 90vh;
-  width: 100vw;
+  height: 90%;
+  width: 100%;
   text-align: center;
 }
 
 .timerTop {
-  height: 60vh;
+  height: 65.7%;
 }
 
 .counter {
   font-size: 50%;
   margin: 0;
+  padding: 20px 0;
 }
 
 .startStop {
   background-color: transparent;
   font-size: 80%;
-  height: 40vh;
-  width: 70vw;
+  height: 65%;
+  width: 70%;
   border: 2px solid black;
   border-radius: 50%;
-  margin-top: 5vh;
 }
 
 .averages {
@@ -58,7 +74,7 @@ body {
 }
 
 .laps {
-  height: 26.2vh;
+  height: 30%;
   list-style: none;
   padding-left: 0;
   background-color: #333333;
@@ -80,7 +96,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 90vh;
+  height: 90%;
 }
 
 .nblButton {
@@ -88,8 +104,8 @@ body {
   font-size: 200%;
   border: 2px solid black;
   border-radius: 10px;
-  height: 18vh;
-  width: 84vw;
+  height: 18%;
+  width: 84%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -136,7 +152,7 @@ form {
 
 .profile {
   background-color: rgba(156, 107, 186, 0.72);
-  height: 90vh;
+  height: 90%;
 }
 
 .profile h1 {
@@ -170,4 +186,12 @@ form {
   color: black;
   text-align: right;
   padding: 4px 6px;
+}
+
+.rbc-header {
+  margin: 0;
+}
+
+.momLog {
+  max-height: 90%;
 }
