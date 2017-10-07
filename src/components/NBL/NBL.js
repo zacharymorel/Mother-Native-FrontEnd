@@ -31,6 +31,8 @@ export default class NBL extends Component {
   }
 
   render() {
+    let url = window.location
+    console.log(url);
     return (
       <div className="nbl">
         <div className="nblButton" onClick={this._feedClick}>

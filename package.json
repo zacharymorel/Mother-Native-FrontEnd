@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://fortheblind.github.io/finalProject",
   "dependencies": {
+    "auth0-js": "^8.10.1",
+    "jwt-decode": "^2.2.0",
     "moment": "^2.18.1",
     "rc-calendar": "^9.1.8",
     "rc-select": "^6.9.3",

@@ -193,5 +193,13 @@ form {
 }
 
 .momLog {
+  background-color: rgba(156, 107, 186, 0.72);
+  height: 90%;
   max-height: 90%;
+}
+
+.calendar {
+  height: 600px;
+  background-color: rgba(156, 107, 186, 0.72);
+
 }
