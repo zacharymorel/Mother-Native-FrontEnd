@@ -5,22 +5,22 @@ export default class Nav extends Component {
   render() {
     return (
       <div className="nav">
-        <Link to="/finalProject/">
+        <Link to="/">
         <span className="navwords">Home</span>
         </Link>
-        <Link to="/finalProject/timer">
+        <Link to="/timer">
         <span className="navwords">Contraction</span>
         <span className="navwords">Timer</span>
         </Link>
-        <Link to="/finalProject/nbl">
+        <Link to="/nbl">
         <span className="navwords">Newborn</span>
         <span className="navwords">Log</span>
         </Link>
-        <Link to="/finalProject/momlog">
+        <Link to="/momlog">
         <span className="navwords">Momma's</span>
         <span className="navwords">Log</span>
         </Link>
-        <Link to="/finalProject/profile">
+        <Link to="/profile">
         <span className="navwords">Profile</span>
         </Link>
       </div>

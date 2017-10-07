@@ -7,7 +7,7 @@ const CLIENT_ID = '{5n9fiCiHb1BqRnQxziqyO8WplKhQODDS}';
 const CLIENT_DOMAIN = 'leoric-jenkins.auth0.com';
 const REDIRECT = 'https://fortheblind.github.io/finalProject/';
 const SCOPE = 'YOUR_SCOPE';
-const AUDIENCE = 'AUDIENCE_ATTRIBUTE';
+const AUDIENCE = 'https://first.test.mommy.app.com';
 
 var auth = new auth0.WebAuth({
   clientID: CLIENT_ID,

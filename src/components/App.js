@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { login, logout, isLoggedIn } from '../utils/AuthService'
+import {isLoggedIn} from '../utils/AuthService'
 import '../styles/index.css';
 import Layout from './Layout'
+import Login from './Login'
 
 export default class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        {/* {(isLoggedIn())?<Layout/>:''} */}
-        <Layout/>
+        {((isLoggedIn())?<Layout/>:<Login/>)}
       </div>
     );
   }
