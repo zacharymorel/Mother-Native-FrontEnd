@@ -7,10 +7,10 @@ import Login from './Login'
 export default class App extends Component {
   render() {
     let homescreen = () => {
-      if (isLoggedIn()) {
-        return (<Layout/>)
-      } else {
+      if (!isLoggedIn()) {
         return (<Login/>)
+      } else {
+        return (<Layout/>)
       }
     }
     return (
