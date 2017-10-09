@@ -3,10 +3,10 @@ import auth0 from 'auth0-js';
 const ID_TOKEN_KEY = 'id_token';
 const ACCESS_TOKEN_KEY = 'access_token';
 
-const CLIENT_ID = '{5n9fiCiHb1BqRnQxziqyO8WplKhQODDS}';
+const CLIENT_ID = '5n9fiCiHb1BqRnQxziqyO8WplKhQODDS';
 const CLIENT_DOMAIN = 'leoric-jenkins.auth0.com';
 const REDIRECT = 'https://fortheblind.github.io/finalProject/';
-const SCOPE = 'YOUR_SCOPE';
+const SCOPE = 'SCOPE';
 const AUDIENCE = 'https://first.test.mommy.app.com';
 
 var auth = new auth0.WebAuth({
@@ -70,7 +70,7 @@ export function setIdToken() {
 
 export function isLoggedIn() {
   const idToken = getIdToken();
-  return !!idToken && !isTokenExpired(idToken);
+  return !idToken && !isTokenExpired(idToken);
 }
 
 function getTokenExpirationDate(encodedToken) {

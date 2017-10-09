@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { getAccessToken } from '../../utils/AuthService'
+import axios from 'axios'
 import FeedForm from './FeedForm'
 import SleepForm from './SleepForm'
 import DiaperForm from './DiaperForm'
@@ -30,9 +32,18 @@ export default class NBL extends Component {
     this.setState({feed:false, sleep:false, diaper:false, notes:true})
   }
 
+  componentDidMount() {
+    let url = 'https://the-best-mom-app.herokuapp.com/api/baby'
+    let sendToken = {
+      method: 'GET',
+      headers: { Authorization: `Bearer ${getAccessToken()}`}
+    }
+    fetch(url, sendToken)
+    .then((res)=>{res.json()})
+    .then((data)=> {console.log(data)})
+  }
+
   render() {
-    let url = window.location
-    console.log(url);
     return (
       <div className="nbl">
         <div className="nblButton" onClick={this._feedClick}>

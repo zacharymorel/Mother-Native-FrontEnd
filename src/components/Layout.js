@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Switch, Route} from 'react-router-dom'
+import {setAccessToken, setIdToken, getAccessToken} from '../utils/AuthService'
 
 import Timer from './Timer'
 import NBL from './NBL/NBL'
@@ -9,6 +10,11 @@ import Home from './Home'
 import Nav from './Nav'
 
 export default class Layout extends Component {
+
+  componentDidMount() {
+    setAccessToken();
+    setIdToken();
+  }
 
   render() {
     return (
