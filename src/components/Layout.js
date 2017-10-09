@@ -17,17 +17,26 @@ export default class Layout extends Component {
   }
 
   render() {
+    let homescreen = () => {
+      if (isLoggedIn()) {
+        return (
+          <div className="main">
+            <Switch>
+              <Route path="/timer" component={Timer}/>
+              <Route path="/nbl" component={NBL}/>
+              <Route path="/momlog" component={MomLog}/>
+              <Route path="/profile" component={Profile}/>
+              <Route path="/" component={Home}/>
+            </Switch>
+            <Nav/>
+          </div>
+        )
+      } else {
+        return (<Login/>)
+      }
+    }
     return (
-      <div className="main">
-        <Switch>
-          <Route path="/timer" component={Timer}/>
-          <Route path="/nbl" component={NBL}/>
-          <Route path="/momlog" component={MomLog}/>
-          <Route path="/profile" component={Profile}/>
-          <Route path="/" component={Home}/>
-        </Switch>
-        <Nav/>
-      </div>
+      {homescreen()}
     );
   }
 }
