@@ -12,6 +12,7 @@ export default class NBL extends Component {
     sleep: false,
     diaper: false,
     notes: false,
+    fetchData: {},
   }
 
   _feedClick = (e)=> {
@@ -34,13 +35,8 @@ export default class NBL extends Component {
 
   componentDidMount() {
     let url = 'https://the-best-mom-app.herokuapp.com/api/baby'
-    let sendToken = {
-      method: 'GET',
-      headers: { Authorization: `Bearer ${getAccessToken()}`}
-    }
-    fetch(url, sendToken)
-    .then((res)=>{res.json()})
-    .then((data)=> {console.log(data)})
+    axios.get(url, { headers: { Authorization: `Bearer ${getAccessToken()}`}})
+    .then((data)=> {console.log(data.data)})
   }
 
   render() {
