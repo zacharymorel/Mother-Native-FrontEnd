@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Switch, Route} from 'react-router-dom'
-import {setAccessToken, setIdToken, getAccessToken} from '../utils/AuthService'
+import {setAccessToken, setIdToken, getAccessToken, isLoggedIn} from '../utils/AuthService'
 
 import Timer from './Timer'
 import NBL from './NBL/NBL'
@@ -8,6 +8,7 @@ import MomLog from './MomLog'
 import Profile from './Profile/Profile'
 import Home from './Home'
 import Nav from './Nav'
+import Login from './Login'
 
 export default class Layout extends Component {
 
@@ -36,7 +37,9 @@ export default class Layout extends Component {
       }
     }
     return (
-      {homescreen()}
+      <div>
+        {homescreen()}
+      </div>
     );
   }
 }
