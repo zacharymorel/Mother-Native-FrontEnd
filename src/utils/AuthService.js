@@ -69,7 +69,7 @@ export function setIdToken() {
 }
 
 export function isLoggedIn() {
-  const idToken = getIdToken();
+  let idToken = getIdToken();
   return !!idToken && !isTokenExpired(idToken);
 }
 
