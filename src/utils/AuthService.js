@@ -65,7 +65,7 @@ export function setAccessToken() {
 // Get and store id_token in local storage
 export function setIdToken() {
   let idToken = getParameterByName('id_token');
-  (!!idToken)?localStorage.setItem(ACCESS_TOKEN_KEY, idToken):'';
+  (!!idToken)?localStorage.setItem(ID_TOKEN_KEY, idToken):'';
 }
 
 export function isLoggedIn() {
