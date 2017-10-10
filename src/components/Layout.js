@@ -13,8 +13,8 @@ import Login from './Login'
 export default class Layout extends Component {
 
   componentDidMount() {
-    (!!setAccessToken())?setAccessToken():'';
-    (!!setIdToken())?setIdToken():'';
+    setAccessToken()
+    setIdToken()
   }
 
   render() {

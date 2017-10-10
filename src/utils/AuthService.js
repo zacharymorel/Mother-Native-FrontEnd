@@ -59,13 +59,13 @@ function getParameterByName(name) {
 // Get and store access_token in local storage
 export function setAccessToken() {
   let accessToken = getParameterByName('access_token');
-  localStorage.setItem(ACCESS_TOKEN_KEY, accessToken);
+  (!!accessToken)?localStorage.setItem(ACCESS_TOKEN_KEY, accessToken):'';
 }
 
 // Get and store id_token in local storage
 export function setIdToken() {
   let idToken = getParameterByName('id_token');
-  localStorage.setItem(ID_TOKEN_KEY, idToken);
+  (!!idToken)?localStorage.setItem(ACCESS_TOKEN_KEY, idToken):'';
 }
 
 export function isLoggedIn() {
