@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 
+import TimerTop from './TimerTop'
+
 export default class Timer extends Component {
   render() {
     return (
       <div className="timer">
-        <div className="timerTop">
-          <p className="counter">##:##</p>
-          <button className="startStop">Start/Stop</button>
-          <p className="averages">Avg Duration  |  Avg Frequency</p>
-        </div>
+        <TimerTop/>
         <ul className="laps">
           <li className="contraction">
             <span>Contraction:</span>
