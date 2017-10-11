@@ -44,7 +44,7 @@ _onClick = (e) => {
     return (
       <div className="timerTop">
         <p className="counter">{this.state.countDisplay}</p>
-        <button className="startStop" onClick={onClick}>Start/Stop</button> {/*post method*/}
+        <button className="startStop" onClick={onClick}>{(!this.state.counting)?'Start':'Stop'}</button> {/*post method*/}
         <p className="averages">Avg Duration  |  Avg Frequency</p>
       </div>
     )
