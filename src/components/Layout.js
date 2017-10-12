@@ -37,17 +37,18 @@ export default class Layout extends Component {
       }
     }
     return (
+      // <div className="main">
+      //   <Switch>
+      //     <Route path="/timer" component={Timer}/>
+      //     <Route path="/nbl" component={NBL}/>
+      //     <Route path="/momlog" component={MomLog}/>
+      //     <Route path="/profile" component={Profile}/>
+      //     <Route path="/" component={Home}/>
+      //   </Switch>
+      //   <Nav/>
+      // </div>
       <div className="homescreen">
-        <div className="main">
-          <Switch>
-            <Route path="/timer" component={Timer}/>
-            <Route path="/nbl" component={NBL}/>
-            <Route path="/momlog" component={MomLog}/>
-            <Route path="/profile" component={Profile}/>
-            <Route path="/" component={Home}/>
-          </Switch>
-          <Nav/>
-        </div>
+        {homescreen()}
       </div>
     );
   }

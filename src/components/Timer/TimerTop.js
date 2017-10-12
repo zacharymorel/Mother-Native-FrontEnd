@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import moment from 'moment'
+import axios from 'axios'
+import {getAccessToken} from '../../utils/AuthService'
 
 export default class TimerTop extends Component {
   state = {
     counting: false,
     counter: 0,
-    countDisplay: '0:0'
+    countDisplay: '0:0',
   }
 
 count = () => {
@@ -28,14 +31,33 @@ stopCounting = () => {
   clearInterval(this.timer)
 }
 
+stampandsend = () => {
+  let now = moment()._d
+  let url = 'https://the-best-mom-app.herokuapp.com/api/mom/contraction'
+  console.log(now)
+  console.log(this.state.counter)
+  console.log('try3')
+  axios({
+    method: 'post',
+    url: 'https://the-best-mom-app.herokuapp.com/api/mom/contraction',
+    headers: { Authorization: `Bearer ${getAccessToken()}`},
+    data: {
+      duration: this.state.counter,
+      clocktimerstampstop: `${moment().format('YYYY-MM-DD HH:mm:ss')}`
+    }
+  })
+//   axios.post(url, { headers: { Authorization: `Bearer ${getAccessToken()}`}})
+//   .then((data)=> {console.log(data)})
+}
+
+
 _onClick = (e) => {
   if (!this.state.counting) {
     this.startCounting()
   }
   if (this.state.counting) {
     this.stopCounting()
-    // retrieve timestamp
-    // fetch post
+    this.stampandsend()
   }
 }
 
@@ -44,7 +66,7 @@ _onClick = (e) => {
     return (
       <div className="timerTop">
         <p className="counter">{this.state.countDisplay}</p>
-        <button className="startStop" onClick={onClick}>{(!this.state.counting)?'Start':'Stop'}</button> {/*post method*/}
+        <button className="startStop" onClick={onClick}>{(!this.state.counting)?'Start':'Stop'}</button>
         <p className="averages">Avg Duration  |  Avg Frequency</p>
       </div>
     )
