@@ -47,9 +47,9 @@ export default class Layout extends Component {
       //   </Switch>
       //   <Nav/>
       // </div>
-      <div className="homescreen">
-        {homescreen()}
-      </div>
-    );
+     <div className="homescreen">
+       {homescreen()}
+     </div>
+    )
   }
 }

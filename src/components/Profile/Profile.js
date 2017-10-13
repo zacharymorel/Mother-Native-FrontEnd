@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 
 export default class Profile extends Component {
   state = {
-    babyID:"",
+    babyID:'',
     babies:[
       {id:1,name:"Chen"},
       {id:2,name:"LiLi"},
       {id:3,name:"ETC"}
-    ]
+    ],
+    background:''
   }
 
   componentDidMount() {
@@ -33,6 +34,7 @@ export default class Profile extends Component {
           <p>Name: (Name)</p>
           <p>Username: (username)</p>
           <p>Change Password</p>
+          <input type="file" className="wallpaper" />
         </div>
         <div className="babyprofs">
           <h2>Babies!</h2>

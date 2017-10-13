@@ -47,7 +47,6 @@ export default class TimerTop extends Component {
     })
   }
 
-
   _onClick = (e) => {
     if (!this.state.counting) {
       this.startCounting()
@@ -60,10 +59,11 @@ export default class TimerTop extends Component {
 
   render() {
     let onClick = this._onClick
+
     return (
       <div className="timerTop">
         <p className="counter">{this.state.countDisplay}</p>
-        <button className="startStop" onClick={onClick}>{(!this.state.counting)?'Start':'Stop'}</button>
+        <button className="startStop" id={(this.state.counting)?'active':''} onClick={onClick}>{(!this.state.counting)?'Start':'Stop'}</button>
         <p className="averages">Avg Duration  |  Avg Frequency</p>
       </div>
     )
