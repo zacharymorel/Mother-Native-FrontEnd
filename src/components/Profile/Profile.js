@@ -32,8 +32,6 @@ export default class Profile extends Component {
         <div className="momprof">
           <h2>Mom's Info</h2>
           <p>Name: (Name)</p>
-          <p>Username: (username)</p>
-          <p>Change Password</p>
           <input type="file" className="wallpaper" />
         </div>
         <div className="babyprofs">

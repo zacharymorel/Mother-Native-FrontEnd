@@ -46,7 +46,7 @@ export default class Timer extends Component {
         <TimerTop/>
         <ul className="laps">
           {contractionlis}
-          <li className="dropbutton" onClick={this.dropContractionLogs}>
+          <li id="dropbutton" onClick={this._dropContractionLogs}>
             <p>Clear Contraction Log</p>
           </li>
         </ul>

@@ -54,6 +54,7 @@ export default class TimerTop extends Component {
     if (this.state.counting) {
       this.stopCounting()
       this.stampandsend()
+      this.setState({counter:0},{countDisplay:'0:0'})
     }
   }
 
