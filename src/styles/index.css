@@ -51,20 +51,21 @@ p {
   align-items: center;
   text-decoration: none;
   padding-left: 2px;
-  padding-right: 2px; 
+  padding-right: 2px;
 }
 
 .home,
 .timer {
   font-size: 300%;
-  background-color: rgb(247, 247, 247);  
+  background-color: rgb(247, 247, 247);
   height: 90%;
   width: 100%;
   text-align: center;
 }
 
 .timerTop {
-  height: 65.7%;
+  height: 56%;
+  padding-bottom: 0;
 }
 
 .counter {
@@ -88,6 +89,12 @@ p {
 
 .averages {
   font-size: 55%;
+  margin: 0;
+}
+
+.dropContractionLog {
+  font-size: 50%;
+  margin: 0;
 }
 
 .laps {
@@ -97,6 +104,7 @@ p {
   background-color: #333333;
   font-size: 50%;
   overflow: scroll;
+  margin-bottom: 0;
 }
 
 .contraction {
@@ -108,7 +116,7 @@ p {
 }
 
 .nbl {
-  background-color: #E8D2AE;  
+  background-color: #E8D2AE;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -174,14 +182,14 @@ form {
 }
 
 .submit {
-  font-family: Cormorant, serif;  
+  font-family: Cormorant, serif;
   background-color: #B3DEC1;
   border: 1px solid #666;
   border-radius: 4px;
 }
 
 .profile {
-  background-color: rgb(247, 247, 247);    
+  background-color: rgb(247, 247, 247);
   height: 90%;
 }
 
@@ -223,7 +231,7 @@ form {
 }
 
 .momLog {
-  background-color: rgb(247, 247, 247);  
+  background-color: rgb(247, 247, 247);
   height: 90%;
   max-height: 90%;
 }
