@@ -7,7 +7,7 @@ export default class DiaperForm extends Component {
         return(
           <div className="form">
             <form action="submit">
-              <input type="text"/>
+              <input className="notes" type="text"/>
               <button className="submit" type="submit">Log Notes</button>
             </form>
           </div>
