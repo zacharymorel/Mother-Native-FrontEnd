@@ -70,10 +70,10 @@ export default class Timer extends Component {
       <div className="timer">
         <Counter/>
         <p className="averages">{frequency}  |  Avg Duration</p>
-        <p className="dropContractionLog">Clear Contraction Log</p>
         <ul className="laps">
           {contractionlis}
         </ul>
+        <p className="dropContractionLog" onClick={this._dropContractionLogs}>Clear Contraction Log</p>
       </div>
     );
   }
