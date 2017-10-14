@@ -16,7 +16,7 @@ export default class FeedForm extends Component {
                 <option value="25">25</option>
                 <option value="30">30</option>
               </select>
-              <button className="submit" type="submit">Log Breast Feeding</button>
+              <button className="submit buttonfeed" type="submit">Log Breast Feeding</button>
             </form>
             <span className="or">or</span>
             <form action="submit">
@@ -30,7 +30,7 @@ export default class FeedForm extends Component {
                 <option value="7">7</option>
                 <option value="8">8</option>
               </select>
-              <button className="submit" type="submit">Log Bottle Feeding</button>
+              <button className="submit buttonfeed" type="submit">Log Bottle Feeding</button>
             </form>
           </div>
         )

@@ -22,7 +22,7 @@ export default class Profile extends Component {
       return(
         <li key={baby.id} className="baby">
           <p>{baby.name}</p>
-          <button>Settings</button>
+          <button className="profilebutton">Settings</button>
         </li>
       )
     })
@@ -31,8 +31,11 @@ export default class Profile extends Component {
         <h1>Profile</h1>
         <div className="momprof">
           <h2>Mom's Info</h2>
-          <p>Name: (Name)</p>
-          <input type="file" className="wallpaper" />
+          <p>Hello, Mandy</p>
+          <div className="image">
+            <h3 className="profileupload">Image Upload</h3>
+            <input type="file" className="wallpaper" />
+          </div>
         </div>
         <div className="babyprofs">
           <h2>Babies!</h2>
