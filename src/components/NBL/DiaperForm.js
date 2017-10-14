@@ -6,11 +6,11 @@ export default class DiaperForm extends Component {
       if (this.props.expand) {
         return(
           <div className="form">
-            <form action="submit">
+            <form className="diaperform" action="submit">
               <button className="submit" type="submit">Log Pee</button>
             </form>
             <span className="or">or</span>
-            <form action="submit">
+            <form className="diaperform" action="submit">
               <button className="submit" type="submit">Log Poop</button>
             </form>
           </div>
