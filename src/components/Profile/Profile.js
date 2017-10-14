@@ -34,7 +34,8 @@ export default class Profile extends Component {
           <p>Hello, Mandy</p>
           <div className="image">
             <h3 className="profileupload">Image Upload</h3>
-            <input type="file" className="wallpaper" />
+            <input type="file" name="file" id="file" class="wallpaper"/>
+            <label className="imageupload" for="file">Choose a file</label>
           </div>
         </div>
         <div className="babyprofs">
@@ -42,6 +43,7 @@ export default class Profile extends Component {
           <ul className="babyList">
             {babylist}
           </ul>
+          <button className="babybutton">Add a Baby</button>
         </div>
       </div>
     );
