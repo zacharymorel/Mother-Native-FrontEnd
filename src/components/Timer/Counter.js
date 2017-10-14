@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
-import moment from 'moment'
 import axios from 'axios'
+import moment from 'moment'
 import {getAccessToken} from '../../utils/AuthService'
 
-export default class TimerTop extends Component {
+export default class Counter extends Component {
   state = {
-    counting: false,
     counter: 0,
     countDisplay: '0:0',
+    counting: false,
   }
 
   count = () => {
-      this.setState(current => {return ({counter: current.counter+=1})})
-      this.setState(current => {
-        let seconds = current.counter%60
-        let minutes = ((current.counter - seconds) / 60)
-        return ({countDisplay: `${minutes}:${seconds}`})
-      })
-    }
+    this.setState(current => {return ({counter: current.counter+=1})})
+    this.setState(current => {
+      let seconds = current.counter%60
+      let minutes = ((current.counter - seconds) / 60)
+      return ({countDisplay: `${minutes}:${seconds}`})
+    })
+  }
 
   startCounting = () => {
     console.log('Start!');
@@ -31,11 +31,21 @@ export default class TimerTop extends Component {
     clearInterval(this.timer)
   }
 
+  _onClick = () => {
+    if (!this.state.counting) {
+      this.startCounting()
+    }
+    if (this.state.counting) {
+      this.stopCounting()
+      this.stampandsend()
+      this.setState({counter:0})
+      this.setState({countDisplay:'0:0'})
+    }
+  }
+
   stampandsend = () => {
     let now = moment()._d
     let url = 'https://the-best-mom-app.herokuapp.com/api/mom/contraction'
-    console.log(now)
-    console.log(this.state.counter)
     axios({
       method: 'post',
       url: 'https://the-best-mom-app.herokuapp.com/api/mom/contraction',
@@ -45,26 +55,15 @@ export default class TimerTop extends Component {
         clocktimerstampstop: `${moment().format('YYYY-MM-DD HH:mm:ss')}`
       }
     })
-  }
-
-  _onClick = (e) => {
-    if (!this.state.counting) {
-      this.startCounting()
-    }
-    if (this.state.counting) {
-      this.stopCounting()
-      this.stampandsend()
-      this.setState({counter:0},{countDisplay:'0:0'})
-    }
+    .then(res=>console.log(res))
   }
 
   render() {
-    let onClick = this._onClick
-
+    let click = this._onClick
     return (
       <div className="timerTop">
-        <p className="counter">{this.state.countDisplay}</p>
-        <button className="startStop" id={(this.state.counting)?'active':''} onClick={onClick}>{(!this.state.counting)?'Start':'Stop'}</button>
+        <p className="counter">{this.state.counter}</p>
+        <button className="startStop" id={(this.state.counting)?'active':''} onClick={click}>{(!this.state.counting)?'Start':'Stop'}</button>
         <p className="averages">Avg Duration  |  Avg Frequency</p>
       </div>
     )

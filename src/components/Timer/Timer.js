@@ -3,39 +3,36 @@ import axios from 'axios'
 import moment from 'moment'
 import {getAccessToken} from '../../utils/AuthService'
 
-import TimerTop from './TimerTop'
+import Counter from './Counter'
 
 export default class Timer extends Component {
   state = {
-    contractions: []
+    contractions: [],
+    url: 'https://the-best-mom-app.herokuapp.com/api/mom/contraction'
   }
 
   _dropContractionLogs = () => {
-    let url = 'https://the-best-mom-app.herokuapp.com/api/mom/contraction'
-    axios.delete(url, {headers: { Authorization: `Bearer ${getAccessToken()}`}})
+    axios.delete(this.state.url, {headers: { Authorization: `Bearer ${getAccessToken()}`}})
     .then(res=>console.log(res))
   }
 
   componentDidMount() {
-    let url = 'https://the-best-mom-app.herokuapp.com/api/mom/contraction'
-    axios.get(url, {headers: { Authorization: `Bearer ${getAccessToken()}`}})
+    axios.get(this.state.url, {headers: { Authorization: `Bearer ${getAccessToken()}`}})
     .then(res=> {
       this.setState({contractions: res.data})
     })
   }
 
   render() {
-    let contractionlis = this.state.contractions.map(contraction => {
+    let contractionlis = this.state.contractions.map((contraction,i) => {
       let dt = `${moment(contraction.clocktimerstampstop).format('MMM Do, h:mma')}`
-      console.log(dt);
       let dur = () => {
         let seconds = contraction.duration%60
         let minutes = ((contraction.duration - seconds) / 60)
         return (`${minutes} min. ${seconds}sec.`)
       }
-      console.log(dur());
       return(
-        <li className="contraction">
+        <li key={i} className="contraction">
           <span className="timestamp">Contration: {dt}</span>
           <span className="duration">Duration: {dur()}</span>
         </li>
@@ -43,12 +40,10 @@ export default class Timer extends Component {
     })
     return (
       <div className="timer">
-        <TimerTop/>
+        <Counter/>
+        <p className="dropContractionLog">Clear Contraction Log</p>
         <ul className="laps">
           {contractionlis}
-          <li id="dropbutton" onClick={this._dropContractionLogs}>
-            <p>Clear Contraction Log</p>
-          </li>
         </ul>
       </div>
     );

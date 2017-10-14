@@ -5,7 +5,7 @@ const ACCESS_TOKEN_KEY = 'access_token';
 
 const CLIENT_ID = '5n9fiCiHb1BqRnQxziqyO8WplKhQODDS';
 const CLIENT_DOMAIN = 'leoric-jenkins.auth0.com';
-const REDIRECT = 'https://fortheblind.github.io/finalProject/';
+const REDIRECT = 'http://localhost:3000/'
 const SCOPE = 'SCOPE';
 const AUDIENCE = 'https://first.test.mommy.app.com';
 
