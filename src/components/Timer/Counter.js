@@ -38,7 +38,7 @@ export default class Counter extends Component {
     if (this.state.counting) {
       this.stopCounting()
       this.stampandsend()
-      this.props.click
+      this.props.click()
       this.setState({counter:0})
       this.setState({countDisplay:'0:0'})
     }

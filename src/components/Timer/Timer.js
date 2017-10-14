@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import moment from 'moment'
 import {getAccessToken} from '../../utils/AuthService'
+import {averageFrequency} from './Fn'
 
 import Counter from './Counter'
 
@@ -14,24 +15,14 @@ export default class Timer extends Component {
   }
 
   _avgFreq = () => {
-    let array = this.state.contractions
-    let sum = 0
-    let dif = 0
-    let avg = 0
-    if (array) {
-      for (let i = 0; i < (array.length-1); i++) {
-        let a = moment((array[i]).clocktimerstampstop)
-        let b = moment((array[i+1]).clocktimerstampstop)
-        dif = b.diff(a, 'minutes')
-        sum += dif
-        console.log(dif);
+    let answer = () => {
+      if (this.state.contractions) {
+        return (averageFrequency(this.state.contractions, ))
+      } else {
+        return ''
       }
-      avg = (sum/array.length).toString()
-      avg = avg.slice(0, (avg[(avg.indexOf('.'))+1]))
-      this.setState({frequency: avg})
-    } else {
-      return ''
     }
+    this.setState({frequency: answer})
   }
 
   _avgDur = () => {
