@@ -10,7 +10,7 @@ body {
   padding-top: 30px;
 }
 
-H1, H2, H3, span {
+H1, H2, H3, span, .startStop, .counter {
   font-family: Pathway Gothic One, sans-serif;
   text-transform: uppercase;
 }
@@ -57,7 +57,7 @@ p {
 .home,
 .timer {
   font-size: 300%;
-  background-color: rgb(247, 247, 247);
+  background-color: #f7f7f7;
   height: 90%;
   width: 100%;
   text-align: center;
@@ -75,7 +75,7 @@ p {
 }
 
 .startStop {
-  background-color: rgba(92, 170, 95, 0.8);
+  background-color: #B3DEC1;
   font-size: 80%;
   height: 75%;
   width: 70%;
@@ -84,7 +84,15 @@ p {
 }
 
 #active {
-  background-color: rgba(145, 38, 38, 0.9);
+  background-color: #DAA38B;
+}
+
+.timestamp {
+  color: #F7F7F7;
+}
+
+.duration {
+  color: #F7F7F7;
 }
 
 .averages {
@@ -103,7 +111,7 @@ p {
   height: 30%;
   list-style: none;
   padding-left: 0;
-  background-color: #333333;
+  background-color: #3A405A;
   font-size: 50%;
   overflow: scroll;
   margin-top:10px;
@@ -112,7 +120,6 @@ p {
 
 .contraction {
   border-bottom: 1px solid #555555;
-  color: #aaaaaa;
   display: flex;
   justify-content: space-between;
   padding: 8px;
@@ -142,10 +149,12 @@ p {
 
 .breast {
   font-family: Cormorant, serif;
+  height: 25px;
 }
 
 .bottle {
   font-family: Cormorant, serif;
+  height: 25px;
 }
 
 .notes {
@@ -163,7 +172,7 @@ p {
 
 .form {
   width: 100%;
-  height: 50%;
+  height: 60%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -189,10 +198,20 @@ form {
   background-color: #B3DEC1;
   border: 1px solid #666;
   border-radius: 4px;
+  height: 25px;
+}
+
+.submittwo {
+  width: 100px;
+  font-family: Cormorant, serif;
+  background-color: #B3DEC1;
+  border: 1px solid #666;
+  border-radius: 4px;
+  height: 25px;  
 }
 
 .profile {
-  background-color: rgb(247, 247, 247);
+  background-color: #f7f7f7;
   height: 90%;
 }
 
@@ -234,13 +253,38 @@ form {
 }
 
 .momLog {
-  background-color: rgb(247, 247, 247);
+  background-color: #f7f7f7;
   height: 90%;
   max-height: 90%;
 }
 
+.diaperform {
+  align-self: center;
+  width: 80px;
+}
+
+.notesform {
+  width: 150px;
+}
+
+input.notes {
+  height: 18px;
+  border-radius: 4px;
+}
+
 .calendar {
   height: 600px;
-  background-color: rgba(156, 107, 186, 0.72);
+  background-color: #DAA38B;
+}
 
+div.rbc-event.rbc-event-allday {
+  background-color: #7BDFF2;
+}
+
+div.rbc-event {
+  background-color: #7BDFF2;
+}
+
+a.rbc-show-more {
+  color: #3A405A;
 }

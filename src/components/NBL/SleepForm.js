@@ -16,7 +16,7 @@ export default class SleepForm extends Component {
                 <option value="25">25</option>
                 <option value="30">30</option>
               </select>
-              <button className="submit" type="submit">Log Sleep</button>
+              <button className="submittwo" type="submit">Log Sleep</button>
             </form>
           </div>
         )
