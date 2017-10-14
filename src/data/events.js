@@ -6,7 +6,7 @@ export default [
     'end': new Date(2015, 3, 1)
   },
   {
-    'title': 'Long Event',
+    'title': 'Out of Town',
     'start': new Date(2015, 3, 7),
     'end': new Date(2015, 3, 10)
   },
@@ -24,18 +24,18 @@ export default [
   },
 
   {
-    'title': 'Some Event',
+    'title': 'Doctor Appt.',
     'start': new Date(2015, 3, 9, 0, 0, 0),
     'end': new Date(2015, 3, 9, 0, 0, 0)
   },
   {
-    'title': 'Conference',
+    'title': 'May\'s House',
     'start': new Date(2015, 3, 11),
     'end': new Date(2015, 3, 13),
     desc: 'Big conference for important people'
   },
   {
-    'title': 'Meeting',
+    'title': 'Church',
     'start': new Date(2015, 3, 12, 10, 30, 0, 0),
     'end': new Date(2015, 3, 12, 12, 30, 0, 0),
     desc: 'Pre-meeting meeting, to prepare for the meeting'
@@ -63,17 +63,17 @@ export default [
     'end': new Date(2015, 3, 12, 21, 0, 0, 0)
   },
   {
-    'title': 'Birthday Party',
+    'title': 'Birthday Party Simon',
     'start':new Date(2015, 3, 13, 7, 0, 0),
     'end': new Date(2015, 3, 13, 10, 30, 0)
   },
   {
-    'title': 'Late Night Event',
+    'title': 'Inlaws in Town',
     'start':new Date(2015, 3, 17, 19, 30, 0),
     'end': new Date(2015, 3, 18, 2, 0, 0)
   },
   {
-    'title': 'Multi-day Event',
+    'title': 'Harvest Days',
     'start':new Date(2015, 3, 20, 19, 30, 0),
     'end': new Date(2015, 3, 22, 2, 0, 0)
   }
