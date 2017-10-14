@@ -95,6 +95,8 @@ p {
 .dropContractionLog {
   font-size: 50%;
   margin: 0;
+  padding-top: 4px;
+  height:7%;
 }
 
 .laps {
@@ -104,6 +106,7 @@ p {
   background-color: #333333;
   font-size: 50%;
   overflow: scroll;
+  margin-top:10px;
   margin-bottom: 0;
 }
 
