@@ -5,3 +5,4 @@ This is my copy and contribution to the Forked Repo where to Master repo lives.
 Tech used for this Porject: 
   - React 
   - CSS
+  - Auth0 Authentication 
