@@ -4,7 +4,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className="home">
-        <img src="#" alt="Size/Baby Facts/Info"/>
+        <img src="../data/BabySizes/corn24.jpeg" alt="Size/Baby Facts/Info"/>
       </div>
     );
   }
