@@ -11,6 +11,24 @@ export default class Timer extends Component {
     url: 'https://the-best-mom-app.herokuapp.com/api/mom/contraction'
   }
 
+  _avgFreq = () => {
+    let sum = 0
+    let dif = 0
+    if (this.state.contractions) {
+      this.state.contractions.map((contraction,i) => {
+        if ((i-1)<this.state.contractions.length) {
+          let a = moment(contraction.clocktimerstampstop)
+          let b = moment((this.state.contractions[i+1]).clocktimerstampstop)
+          dif = b.diff(a, 'minutes')
+        }
+        return (sum += dif)
+      })
+      return (sum/this.state.contractions.length)
+    } else {
+      return ''
+    }
+  }
+
   _dropContractionLogs = () => {
     axios.delete(this.state.url, {headers: { Authorization: `Bearer ${getAccessToken()}`}})
     .then(res=>console.log(res))
@@ -22,6 +40,7 @@ export default class Timer extends Component {
       this.setState({contractions: res.data})
     })
   }
+
 
   render() {
     let contractionlis = this.state.contractions.map((contraction,i) => {
@@ -38,9 +57,19 @@ export default class Timer extends Component {
         </li>
       )
     })
+    let frequency = () => {
+      let a = this.state.contractions[0]
+      a = moment(a.clocktimerstampstop)
+      let b = this.state.contractions[1]
+      b = moment(b.clocktimerstampstop)
+      let dif = b.diff(a,'minutes')
+      console.log(dif)
+      return dif
+    }
     return (
       <div className="timer">
         <Counter/>
+        <p className="averages">{frequency}  |  Avg Duration</p>
         <p className="dropContractionLog">Clear Contraction Log</p>
         <ul className="laps">
           {contractionlis}

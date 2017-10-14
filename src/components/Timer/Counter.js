@@ -44,8 +44,6 @@ export default class Counter extends Component {
   }
 
   stampandsend = () => {
-    let now = moment()._d
-    let url = 'https://the-best-mom-app.herokuapp.com/api/mom/contraction'
     axios({
       method: 'post',
       url: 'https://the-best-mom-app.herokuapp.com/api/mom/contraction',
@@ -64,7 +62,6 @@ export default class Counter extends Component {
       <div className="timerTop">
         <p className="counter">{this.state.counter}</p>
         <button className="startStop" id={(this.state.counting)?'active':''} onClick={click}>{(!this.state.counting)?'Start':'Stop'}</button>
-        <p className="averages">Avg Duration  |  Avg Frequency</p>
       </div>
     )
   }

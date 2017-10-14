@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Switch, Route} from 'react-router-dom'
-import {setAccessToken, setIdToken, getAccessToken, isLoggedIn} from '../utils/AuthService'
+import {setAccessToken, setIdToken, isLoggedIn} from '../utils/AuthService'
 
 import Timer from './Timer/Timer'
 import NBL from './NBL/NBL'
