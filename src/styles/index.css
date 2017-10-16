@@ -10,7 +10,7 @@ body {
   padding-top: 30px;
 }
 
-H1, H2, H3, span, label, .profilebutton, .startStop, .counter {
+H1, H2, H3, span, label, .profilebutton, .startStop, .counter, .babybutton {
   font-family: Pathway Gothic One, sans-serif;
   text-transform: uppercase;
 }
@@ -261,6 +261,8 @@ form {
 .profile {
   background-color: #f7f7f7;
   height: 90%;
+  display: flex;
+  flex-direction: column;
 }
 
 .profile h1 {
@@ -331,10 +333,6 @@ form {
   border-radius: 10px;
   height: 18%;
   width: 35%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
 
 .baby {
@@ -347,6 +345,7 @@ form {
   list-style: none;
   padding-left: 0px;
   width: 100%;
+  height: 230px;
 }
 
 .babybutton {
@@ -354,10 +353,10 @@ form {
   font-size: 100%;
   border: 2px solid black;
   border-radius: 10px;
-  height: 18%;
-  width: 35%;
+  height: 5%;
+  width: 30%;
   display: inline;
-
+  align-self: center;
 }
 
 .rbc-header {

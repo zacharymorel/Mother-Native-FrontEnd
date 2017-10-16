@@ -43,8 +43,8 @@ export default class Profile extends Component {
           <ul className="babyList">
             {babylist}
           </ul>
-          <button className="babybutton">Add a Baby</button>
         </div>
+          <button className="babybutton">Add a Baby</button>
       </div>
     );
   }
