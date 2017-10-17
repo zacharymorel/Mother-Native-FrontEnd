@@ -75,7 +75,7 @@ export default [
         'factfour': 'Length: 6 inches'
     },
     {
-        'image': 'finalProject/src/data/BabySizes/sweetpotato18.png',
+        'image': 'finalProject/src/data/BabySizes/sweetpotato18.jpg',
         'factone': 'Baby’s teeth have begun to form',
         'factetwo': 'Baby is now starting to hear noises in your body and may startle at loud noises',
         'factthree': 'Baby may be quite active and changing positions often ',
@@ -114,7 +114,7 @@ export default [
         'factthree': 'Length: 11 1/2 inches'
     },
     {
-        'image': 'finalProject/src/data/BabySizes/corn24.png',
+        'image': 'finalProject/src/data/BabySizes/corn24.jpeg',
         'factone': 'Baby has developed waking/sleeping patterns',
         'factetwo': 'Real hair begins growing on baby’s head',
         'factthree': 'Baby’s unique hand and foot prints are forming',
@@ -128,13 +128,13 @@ export default [
         'factfour': 'Length: 14 inches'
     },
     {
-        'image': 'finalProject/src/data/BabySizes/scallion26.png',
+        'image': 'finalProject/src/data/BabySizes/scallion26.jpg',
         'factone': 'Baby is getting bigger and smarter',
         'factetwo': 'Baby is showing lots of brain activity',
         'factthree': 'Length: 15 inches'
     },
     {
-        'image': 'finalProject/src/data/BabySizes/cauliflower27.png',
+        'image': 'finalProject/src/data/BabySizes/cauliflower27.JPG',
         'factone': 'Baby’s hearing system is completely developed',
         'factetwo': 'Baby’s lungs are developing surfactant which allows them to inflate',
         'factthree': 'Baby’s eyes are forming and can now open',
@@ -167,7 +167,7 @@ export default [
         'factthree': 'Length: 16 inches'
     },
     {
-        'image': 'finalProject/src/data/BabySizes/Jicama32.png',
+        'image': 'finalProject/src/data/BabySizes/Jicama32.svg',
         'factone': 'Baby is practicing breathing motions',
         'factetwo': 'All 5 senses are developed',
         'factthree': 'Length: 17 inches'
@@ -192,7 +192,7 @@ export default [
         'factthree': 'Length: 18-20 inches'
     },
     {
-        'image': 'finalProject/src/data/BabySizes/Swisschard36.png',
+        'image': 'finalProject/src/data/BabySizes/romanelettece36.png',
         'factone': 'You have about one month to go!',
         'factetwo': 'Baby is putting on weight to get ready for birth',
         'factthree': 'Length: 20 1/2 inches'
@@ -217,7 +217,7 @@ export default [
         'factfour': 'Length: 21-23 inches'
     },
     {
-        'image': 'finalProject/src/data/BabySizes/pumkin40.png',
+        'image': 'finalProject/src/data/BabySizes/pumkin40.jpg',
         'factone': 'Congratulations! Baby is full developed and will be born any day!',
         'factetwo': 'Remember, due dates are just an estimate!',
     }
