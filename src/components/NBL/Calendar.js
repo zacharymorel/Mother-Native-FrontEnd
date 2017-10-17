@@ -32,7 +32,7 @@ export default class Basic extends Component {
         <BigCalendar
           views={['month']}
           events={events}
-          defaultDate={new Date(2015, 3, 1)}
+          defaultDate={new Date(2017, 9, 1)}
           defaultView='month'
           components={{
             event: Event,
