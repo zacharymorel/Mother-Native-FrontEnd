@@ -92,7 +92,7 @@ export default class Timer extends Component {
     return (
       <div className="timer">
         <Counter click={this._updateStats}/>
-        <p className="averages">Frequency: {this.state.frequency}  |  Duration: {this.state.duration}</p>
+        <p className="averages">Frequency: {this.state.frequency} min. |  Duration: {this.state.duration} sec.</p>
         <ul className="laps">
           {contractionlist}
         </ul>

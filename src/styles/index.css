@@ -11,13 +11,13 @@ body {
 }
 
 H1, H2, H3, span, label, .profilebutton, .startStop, .counter, .babybutton, .createBabyButton {
-  font-family: Pathway Gothic One, sans-serif;
+  font-family: 'Pathway Gothic One', sans-serif;
   text-transform: uppercase;
 }
 
 p {
-  font-family: Cormorant, serif;
-  font-size: large; 
+  font-family: 'Cormorant', serif;
+  font-size: large;
 }
 
 #root {
@@ -105,11 +105,22 @@ div.log {
   text-align: center;
 }
 
-.home {
-  background-size: 250px 400px;
-  background-image: url('../data/BabySizes/pear17.png');
-  background-repeat: no-repeat;
-  background-position: center;
+.facts {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(218, 163, 140, .8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fact {
+  text-transform: none;
+  font-family: 'Cormorant';
+  color: rgba(247, 247, 247, .8);
+  font-size: 60%;
+  padding: 0 5px;
 }
 
 .timerTop {
@@ -145,13 +156,15 @@ div.log {
 }
 
 .averages {
-  font-size: 55%;
+  font-size: 45%;
   margin: 0;
 }
 
 .dropContractionLog {
+  background-color: #daa38b;
   font-size: 50%;
   margin: 0;
+  border-top: 1px solid #666;
   padding-top: 4px;
   height:7%;
 }
@@ -252,7 +265,7 @@ form {
 }
 
 .buttonfeed {
-  font-size: small;  
+  font-size: small;
 }
 
 .submittwo {
@@ -261,7 +274,7 @@ form {
   background-color: #B3DEC1;
   border: 1px solid #666;
   border-radius: 4px;
-  height: 25px;  
+  height: 25px;
   font-size: initial;
 }
 
@@ -345,7 +358,7 @@ form {
 .baby {
   display: flex;
   justify-content: space-around;
-  align-items: center;  
+  align-items: center;
 }
 
 .babyList {
@@ -450,4 +463,10 @@ a.rbc-show-more {
   align-items: center;
   justify-content: center;
   padding: 2px 6px 3px 6px;
+}
+.week6 {
+  background-size: 250px 400px;
+  background-image: url('../data/BabySizes/pomegranate6.png');
+  background-repeat: no-repeat;
+  background-position: center;
 }
