@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import moment from 'moment'
 import {getAccessToken} from '../../utils/AuthService'
-import {averageFrequency} from './Fn'
 
 import Counter from './Counter'
 
