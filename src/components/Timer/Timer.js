@@ -15,14 +15,26 @@ export default class Timer extends Component {
   }
 
   _avgFreq = () => {
-    let answer = () => {
-      if (this.state.contractions) {
-        return (averageFrequency(this.state.contractions, ))
-      } else {
-        return ''
+    let array = this.state.contractions
+    if (!!this.state.contractions) {
+      let sum = 0
+      for (let i = 0; i < (array.length-1); i++) {
+        let a = moment((array[i]).clocktimerstampstop)
+        let b = moment((array[i+1]).clocktimerstampstop)
+        let dif = b.diff(a, 'minutes')
+        sum += dif
       }
+      console.log('sum: '+sum);
+      let avg = sum/(array.length)
+      console.log('avg: '+avg);
+      let str = avg.toString()
+      console.log('str: '+str);
+      let answer = str.slice(0, (str[(str.indexOf('.'))+1]))
+      console.log(answer);
+      this.setState({frequency: answer})
+    } else {
+      return ''
     }
-    this.setState({frequency: answer})
   }
 
   _avgDur = () => {
@@ -64,7 +76,7 @@ export default class Timer extends Component {
 
 
   render() {
-    let contractionlis = this.state.contractions.map((contraction,i) => {
+    let contractionlist = this.state.contractions.map((contraction,i) => {
       let dt = `${moment(contraction.clocktimerstampstop).format('MMM Do, h:mma')}`
       let dur = () => {
         let seconds = contraction.duration%60
@@ -83,7 +95,7 @@ export default class Timer extends Component {
         <Counter click={this._updateStats}/>
         <p className="averages">Frequency: {this.state.frequency}  |  Duration: {this.state.duration}</p>
         <ul className="laps">
-          {contractionlis}
+          {contractionlist}
         </ul>
         <p className="dropContractionLog" onClick={this._dropContractionLogs}>Clear Contraction Log</p>
       </div>
