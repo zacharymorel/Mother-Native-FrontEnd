@@ -33,6 +33,7 @@ _inputChange = (e) => {
 
 _createBaby = (e) => {
   e.preventDefault()
+  this.setState({addBaby: false})
   console.log(this.state.duedate);
   axios({
     method: 'post',
@@ -46,7 +47,7 @@ _createBaby = (e) => {
     }
   })
   .then(res=>console.log(res))
-  .then(res=>this.setState({addBaby: false}))
+  .then(res=>{this.setState({addBaby: false})})
 }
 
   componentDidMount() {
@@ -66,7 +67,7 @@ _createBaby = (e) => {
           <div className="image">
             <h3 className="profileupload">Image Upload</h3>
             <input type="file" name="file" id="file" className="wallpaper"/>
-            <label className="imageupload" for="file">Choose a file</label>
+            <label className="imageupload" htmlFor="file">Choose a file</label>
           </div>
         </div>
         {createBaby}
