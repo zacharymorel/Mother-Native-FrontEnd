@@ -13,7 +13,7 @@ export default [
         'factfour': 'Length: 1/3 inch'
     },
     {
-        'image': 'finalProject/src/data/BabySizes/kidneybeans8.jpg',
+        'image': 'finalProject/src/data/BabySizes/kidneybean8.png',
         'factone': 'Brainwave activity starts',
         'factetwo': 'Webbed fingers and toes begin to form',
         'factthree': 'Lungs, ears, eyes, upper lip, and nose start to form',
