@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 import BabyList from './BabyList'
 import NewBaby from './NewBaby'
-import {getAccessToken} from '../../utils/AuthService'
+import {getAccessToken, logout} from '../../utils/AuthService'
 
 export default class Profile extends Component {
   state = {
@@ -50,6 +51,11 @@ _createBaby = (e) => {
   .then(res=>{this.setState({addBaby: false})})
 }
 
+_logout = () => {
+  logout()
+
+ }
+
   componentDidMount() {
     let url = 'https://the-best-mom-app.herokuapp.com/api/baby'
     axios.get(url, {headers: { Authorization: `Bearer ${getAccessToken()}`}})
@@ -63,7 +69,12 @@ _createBaby = (e) => {
         <h1>Profile</h1>
         <div className="momprof">
           <h2>Mom's Info</h2>
-          <p>Hello, Mandy</p>
+          <div className="logout">
+            <span>Hello, Mandy</span>
+            <Link to="/" onClick={()=>{logout()}} className="logoutButton">
+              <span>Logout</span>
+            </Link>
+          </div>
           <div className="image">
             <h3 className="profileupload">Image Upload</h3>
             <input type="file" name="file" id="file" className="wallpaper"/>
