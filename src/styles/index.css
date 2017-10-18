@@ -10,6 +10,17 @@ body {
   padding-top: 30px;
 }
 
+h1,
+h2,
+h3,
+span,
+label,
+.profilebutton,
+.startStop,
+.counter,
+.babybutton,
+.createBabyButton {
+  font-family: Pathway Gothic One, sans-serif;
 H1, H2, H3, span, label, .profilebutton, .startStop, .counter, .babybutton, .createBabyButton {
   font-family: 'Pathway Gothic One', sans-serif;
   text-transform: uppercase;
@@ -35,22 +46,23 @@ p {
 div.log {
   width: 100%;
   height: 100%;
-  background-color: #B3DEC1;
+  background-color: #b3dec1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('../data/BabySizes/mothernative1.png');
+  background-image: url("../data/BabySizes/mothernative1.png");
   background-size: 77% 45%;
   background-repeat: no-repeat;
   background-position: 50% 75%;
 }
 
-.log, h1 {
+.log,
+h1 {
   margin-bottom: 0;
 }
 
 .mothernative {
-  font-family: 'Satisfy', cursive;
+  font-family: "Satisfy", cursive;
   text-transform: lowercase;
   margin-top: 10px;
   margin-bottom: 15px;
@@ -135,7 +147,7 @@ div.log {
 }
 
 .startStop {
-  background-color: #B3DEC1;
+  background-color: #b3dec1;
   font-size: 80%;
   height: 75%;
   width: 70%;
@@ -144,15 +156,15 @@ div.log {
 }
 
 #active {
-  background-color: #DAA38B;
+  background-color: #daa38b;
 }
 
 .timestamp {
-  color: #F7F7F7;
+  color: #f7f7f7;
 }
 
 .duration {
-  color: #F7F7F7;
+  color: #f7f7f7;
 }
 
 .averages {
@@ -166,17 +178,17 @@ div.log {
   margin: 0;
   border-top: 1px solid #666;
   padding-top: 4px;
-  height:7%;
+  height: 7%;
 }
 
 .laps {
   height: 30%;
   list-style: none;
   padding-left: 0;
-  background-color: #3A405A;
+  background-color: #3a405a;
   font-size: 50%;
   overflow: scroll;
-  margin-top:10px;
+  margin-top: 10px;
   margin-bottom: 0;
 }
 
@@ -188,7 +200,7 @@ div.log {
 }
 
 .nbl {
-  background-color: #E8D2AE;
+  background-color: #e8d2ae;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -257,7 +269,7 @@ form {
 
 .submit {
   font-family: Cormorant, serif;
-  background-color: #B3DEC1;
+  background-color: #b3dec1;
   border: 1px solid #666;
   border-radius: 4px;
   height: 25px;
@@ -271,7 +283,7 @@ form {
 .submittwo {
   width: 100px;
   font-family: Cormorant, serif;
-  background-color: #B3DEC1;
+  background-color: #b3dec1;
   border: 1px solid #666;
   border-radius: 4px;
   height: 25px;
@@ -309,11 +321,11 @@ form {
 
 .wallpaper {
   width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 .babyprof {
@@ -436,19 +448,19 @@ input.notes {
 
 .calendar {
   height: 600px;
-  background-color: #DAA38B;
+  background-color: #daa38b;
 }
 
 div.rbc-event.rbc-event-allday {
-  background-color: #7BDFF2;
+  background-color: #7bdff2;
 }
 
 div.rbc-event {
-  background-color: #7BDFF2;
+  background-color: #7bdff2;
 }
 
 a.rbc-show-more {
-  color: #3A405A;
+  color: #3a405a;
 }
 
 .momprof {
@@ -469,9 +481,249 @@ a.rbc-show-more {
   justify-content: center;
   padding: 2px 6px 3px 6px;
 }
+
 .week6 {
   background-size: 250px 400px;
-  background-image: url('../data/BabySizes/pomegranate6.png');
+  background-image: url("../data/BabySizes/pomegranate6.png");
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.week7 {
+  background-size: 250px 400px;
+  background-image: url("../data/BabySizes/blueberry7.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week8 {
+  background-size: 200px 250px;
+  background-image: url("../data/BabySizes/kidneybean8.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week9 {
+  background-size: 200px 250px;
+  background-image: url("../data/BabySizes/grape9.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week10 {
+  background-size: 270px 320px;
+  background-image: url("../data/BabySizes/Kumquat10.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week11 {
+  background-size: 250px 300px;
+  background-image: url("../data/BabySizes/brussels11.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week12 {
+  background-size: 250px 300px;
+  background-image: url("../data/BabySizes/lime12.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week13 {
+  background-size: 250px 300px;
+  background-image: url("../data/BabySizes/lemon13.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week14 {
+  background-size: 250px 300px;
+  background-image: url("../data/BabySizes/Necatarine14.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week15 {
+  background-size: 250px 300px;
+  background-image: url("../data/BabySizes/apple15.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week16 {
+  background-size: 250px 300px;
+  background-image: url("../data/BabySizes/Avacado16.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week17 {
+  background-size: 250px 400px;
+  background-image: url("../data/BabySizes/pear17.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week18 {
+  background-size: 250px 250px;
+  background-image: url("../data/BabySizes/sweetpotato18.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week19 {
+  background-size: 220px 220px;
+  background-image: url("../data/BabySizes/heirloomTomato19.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week20 {
+  background-size: 260px 260px;
+  background-image: url("../data/BabySizes/banana20.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week21 {
+  background-size: 260px 260px;
+  background-image: url("../data/BabySizes/carrot21.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week22 {
+  background-size: 230px 230px;
+  background-image: url("../data/BabySizes/cucmber22.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week23 {
+  background-size: 230px 230px;
+  background-image: url("../data/BabySizes/mango23.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week24 {
+  background-size: 230px 230px;
+  background-image: url("../data/BabySizes/corn24.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week25 {
+  background-size: 230px 230px;
+  background-image: url("../data/BabySizes/routabaga25.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week26 {
+  background-size: 230px 230px;
+  background-image: url("../data/BabySizes/zucchini26.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week27 {
+  background-size: 250px 250px;
+  background-image: url("../data/BabySizes/kale27.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week28 {
+  background-size: 250px 250px;
+  background-image: url("../data/BabySizes/eggplant28.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week29 {
+  background-size: 250px 250px;
+  background-image: url("../data/BabySizes/butternutsquash29.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week30 {
+  background-size: 230px 230px;
+  background-image: url("../data/BabySizes/cabbage30.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week31 {
+  background-size: 230px 230px;
+  background-image: url("../data/BabySizes/coconut31.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week32 {
+  background-size: 230px 230px;
+  background-image: url("../data/BabySizes/Jicama32.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week33 {
+  background-size: 210px 300px;
+  background-image: url("../data/BabySizes/pineapple33.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week34 {
+  background-size: 220px 260px;
+  background-image: url("../data/BabySizes/cantaloupe34.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week35 {
+  background-size: 240px 240px;
+  background-image: url("../data/BabySizes/honeydewmelon35.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week36 {
+  background-size: 240px 240px;
+  background-image: url("../data/BabySizes/romanelettece36.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week37 {
+  background-size: 240px 320px;
+  background-image: url("../data/BabySizes/papaya37.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week38 {
+  background-size: 300px 350px;
+  background-image: url("../data/BabySizes/jackfruit38.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week39 {
+  background-size: 250px 300px;
+  background-image: url("../data/BabySizes/miniwatermelon39.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.week40 {
+  background-size: 250px 300px;
+  background-image: url("../data/BabySizes/pumkin40.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
