@@ -33,6 +33,7 @@ _inputChange = (e) => {
 
 _createBaby = (e) => {
   e.preventDefault()
+  this.setState({addBaby: false})
   console.log(this.state.duedate);
   axios({
     method: 'post',
@@ -46,7 +47,7 @@ _createBaby = (e) => {
     }
   })
   .then(res=>console.log(res))
-  .then(res=>this.setState({addBaby: false}))
+  .then(res=>{this.setState({addBaby: false})})
 }
 
   componentDidMount() {
